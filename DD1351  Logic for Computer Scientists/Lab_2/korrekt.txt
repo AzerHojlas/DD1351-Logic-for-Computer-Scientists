@@ -1,0 +1,13 @@
+[neg(neg(and(p, q)))].
+
+imp(p, p).
+
+[
+  [1, neg(neg(and(p, q))), premise ],
+  [2, and(p, q), negnegel(1) ],
+  [3, p, andel1(2)],
+  [
+    [4, p, assumption]
+  ],
+  [5, imp(p, p),    impint(4,4)]
+].

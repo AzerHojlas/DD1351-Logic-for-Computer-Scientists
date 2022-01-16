@@ -1,0 +1,19 @@
+% States: start screen (s), choose drink (c), pay (p), recieve drink (r), try again (t)
+% Atoms: card accepted (ca), card declined (cd)
+
+[[s, [c]],
+ [c, [p]],
+ [p, [c, t, r]],
+ [r, [s]],
+ [t, [s, p]]].
+
+[[s, []],
+ [c, []],
+ [p, []],
+ [r, [ca]],
+ [t, [cd]]].
+
+s.
+
+ef(and(ca,cd)).
+
